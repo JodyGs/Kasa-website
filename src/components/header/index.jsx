@@ -7,17 +7,24 @@ export default function Header() {
 	return (
 		<header>
 			<nav>
-				<img src={logo} alt="Kasa" />
 				<ul>
 					<li>
-						{/* <NavLink to="/" activeclassname="active"> */}
-						Accueil
-						{/* </NavLink> */}
+						<NavLink to="/">
+							<img src={logo} alt="Kasa" />
+						</NavLink>
 					</li>
-					<li>
-						{/* <NavLink to="/a-propos" activeclassname="active"> */}A propos
-						{/* </NavLink> */}
-					</li>
+					<div>
+						<li>
+							<NavLink to="/" activeclassname="active">
+								Accueil
+							</NavLink>
+						</li>
+						<li>
+							<NavLink to="/a-propos" activeclassname="active">
+								A propos
+							</NavLink>
+						</li>
+					</div>
 				</ul>
 			</nav>
 		</header>

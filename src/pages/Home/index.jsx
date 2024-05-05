@@ -4,6 +4,7 @@ import homeBanner from "../../assets/img/banner.webp";
 import Card from "../../components/Card";
 import { Link } from "react-router-dom";
 import "./home.scss";
+import NotFound from "../NotFound";
 
 const clsn = "banner";
 
@@ -25,7 +26,7 @@ export default function Home() {
 	}, []);
 
 	if (error) {
-		console.log("error"); //TODO: Page 404
+		return <NotFound />;
 	} else if (data) {
 		return (
 			<main>

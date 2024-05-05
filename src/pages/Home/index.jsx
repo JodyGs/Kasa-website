@@ -25,7 +25,7 @@ export default function Home() {
 	}, []);
 
 	if (error) {
-		console.log("error");
+		console.log("error"); //TODO: Page 404
 	} else if (data) {
 		return (
 			<main>

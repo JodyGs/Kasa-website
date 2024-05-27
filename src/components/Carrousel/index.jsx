@@ -1,10 +1,10 @@
-import { useState } from "react";
+import React from "react";
 import leftArrow from "../../assets/img/arrow-left.svg";
 import rightArrow from "../../assets/img/arrow-right.svg";
 import "./carrousel.scss";
 
 export default function Carrousel({ slides }) {
-	const [current, setCurrent] = useState(0);
+	const [current, setCurrent] = React.useState(0);
 	const length = slides.length;
 
 	function goToNextSlide() {

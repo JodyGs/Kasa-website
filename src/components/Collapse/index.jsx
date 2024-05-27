@@ -1,14 +1,13 @@
 import "./collapse.scss";
-import { useState } from "react";
+import React from "react";
 import arrow from "../../assets/img/arrow.svg";
-import { useRef } from "react";
 
 function Collapse({ title, children }) {
-	const [open, setOpen] = useState(false);
+	const [open, setOpen] = React.useState(false);
 	const toggle = () => {
 		setOpen(!open);
 	};
-	const contentRef = useRef();
+	const contentRef = React.useRef();
 
 	return (
 		<div className="collapse-container">

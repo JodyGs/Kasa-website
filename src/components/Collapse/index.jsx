@@ -3,7 +3,7 @@ import { useState } from "react";
 import arrow from "../../assets/img/arrow.svg";
 import { useRef } from "react";
 
-function Collapse({ text, title }) {
+function Collapse({ title, children }) {
 	const [open, setOpen] = useState(false);
 	const toggle = () => {
 		setOpen(!open);
@@ -32,13 +32,9 @@ function Collapse({ text, title }) {
 				id="collapse-parent"
 				className={open ? "collapse-parent show" : "collapse-parent hide"}
 				ref={contentRef}
-				style={
-					open
-						? { height: contentRef.current.scrollHeight + "px" }
-						: { height: "0px" }
-				}
+				style={open ? { maxHeight: "999px" } : { maxHeight: "0px" }}
 			>
-				<div className="collapse-content">{text}</div>
+				<div className="collapse-content">{children}</div>
 			</div>
 		</div>
 	);

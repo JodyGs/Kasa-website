@@ -30,7 +30,9 @@ export default function Apropos() {
 			<Banner img={AproposBanner} className={banner} />
 			<div className="about-container">
 				{COLLAPSE_CONTENT.map(({ title, text }, index) => (
-					<Collapse key={index} title={title} text={text} />
+					<Collapse key={index} title={title}>
+						<p>{text}</p>
+					</Collapse>
 				))}
 			</div>
 		</main>

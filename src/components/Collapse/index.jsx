@@ -32,7 +32,11 @@ function Collapse({ title, children }) {
 				id="collapse-parent"
 				className={open ? "collapse-parent show" : "collapse-parent hide"}
 				ref={contentRef}
-				style={open ? { maxHeight: "999px" } : { maxHeight: "0px" }}
+				style={
+					open
+						? { height: contentRef.current.scrollHeight + "px" }
+						: { maxHeight: "0px" }
+				}
 			>
 				<div className="collapse-content">{children}</div>
 			</div>
